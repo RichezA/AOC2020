@@ -1,0 +1,19 @@
+            foreach (var line in template)
+            {
+                row += 1;
+                foreach (var character in line)
+                {
+                    size += 1;
+                    entries.Add(character.ToString());
+                }
+            }
+
+            for (int i = 0; i < size - col; i += col + 3)
+            {
+                if (entries.ElementAt(i) == "#")
+                {
+                    trees++;
+                }
+            }
+
+            System.Console.WriteLine(trees);
