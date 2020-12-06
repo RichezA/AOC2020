@@ -11,13 +11,13 @@ namespace day4
         private static readonly string EMPTY_LINE = "\r\n\r\n";
         static void Main(string[] args)
         {
-            Part1();
-            //Part2();
+            //Part1();
+            Part2();
         }
 
         static void Part1()
         {
-            var template = File.ReadAllText("day4.txt").Split(new string[] { EMPTY_LINE }, StringSplitOptions.RemoveEmptyEntries);
+            var template = File.ReadAllText("input.txt").Split(new string[] { EMPTY_LINE }, StringSplitOptions.RemoveEmptyEntries);
             var keywords = new List<string>()
             {
                 "byr",
@@ -78,7 +78,7 @@ namespace day4
 
         static void Part2()
         {
-            var template = File.ReadAllText("input.txt")
+            var template = File.ReadAllText("day4.txt")
                   .Replace(Environment.NewLine, "|")
                   .Replace("||", "-")
                   .Replace("|", ";")
